@@ -1,4 +1,4 @@
-*,
+/* *,
 *:before,
 *:after {
     padding: 0;
@@ -84,7 +84,8 @@ body {
 .text {
     font-size: 18px;
     line-height: 24px;
-}
+}  
+
 
 .tabs-block:target {
     display: block;
@@ -101,4 +102,7 @@ body {
 .tabs-item span {
     position: relative;
     z-index: 2;
-}
+} */
+
+
+
