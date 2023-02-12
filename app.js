@@ -162,6 +162,8 @@
 // // let searchText = "пР";
 // // console.log(text.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())); // true
 
+// ============================================================================================================= //
+
 // *******// Другий модуль підходить к екватору і можемо виділити собі найважливіші моменти і зробити собі шпаргалку
 // Масиви є однією з найпоширеніших структур даних в JS, вони використовуються для зберігання даних. Також масиви дають багато можливостей для роботи з даними.
 // Функції дозволяють повторювати одну й ту саму дію в багатьох частинах програми. Це як основний будівельний елемент.
@@ -206,6 +208,8 @@
 // const randomFruit = fruits[Math.floor(Math.random() * fruits.length)];
 // console.log(randomFruit); // поверне рандомний фрукт із масиву
 
+//  =============================================================================================================  //
+
 // console.log(null && "fallse" && "Mango");
 // console.log(null || "fallse" || "Mango");
 // console.log("fallse" && "Mango" || "null");
@@ -220,4 +224,308 @@
 // const userName = "Олександр П'ятницький";
 // const description = "я вивчаю - HTML, CSS, JawaScript";
 // console.log(userName, description);
+
+// ** Чісла!
+// const valueA = '5';
+// console.log(Number(valueA)); // 5
+// console.log(typeof Number(valueA)); // number
+
+// const valueB = "random string";
+// console.log(Number(valueB)); // NaN
+// console.log(typeof Number(valueB)); // number
+
+//------------------------------------------------------//
+
+// ---- Методи Number.parseInt() і Number.parseFloat()
+// Перетворюють рядок символ за символом, доки це можливо. У разі виникнення помилки повертається підсумкове число.
+
+// ---- Метод Number.parseInt() парсить з рядка ціле число.
+
+// console.log(Number.parseInt("5px")); // 5
+// console.log(Number.parseInt("12qwe74")); // 12
+// console.log(Number.parseInt("12.46qwe79")); // 12
+// console.log(Number.parseInt("qweqwe")); // NaN
+
+// ---- Метод Number.parseFloat() парсить з рядка дробове число.
+
+// console.log(Number.parseFloat("5px")); // 5
+// console.log(Number.parseFloat("12qwe74")); // 12
+// console.log(Number.parseFloat("12.46qwe79")); // 12.46
+// console.log(Number.parseFloat("qweqwe")); // NaN
+
+//--------------------------------------------------------//
+
+// Перевірка на число
+// Для перевірки на число можна використовувати метод Number.isNaN(val). Він перевіряє, чи вказане значення є NaN. Метод відповідає на запитання "Це Not A Number?" і повертає:
+
+// true - якщо значення val - NaN
+// false - якщо значення val - не NaN
+// Для всіх значень val, крім NaN, при передачі в Number.isNaN(val) поверне false. Цей метод не намагається перетворити val в число, а просто виконує перевірку на NaN.
+
+// const validNumber = Number("51"); // 51
+// console.log(Number.isNaN(validNumber)); // false
+
+// const invalidNumber = Number("qweqwe"); // NaN
+// console.log(Number.isNaN(invalidNumber)); // true
+
+//-------------------------------------------------------//
+
+// ---- Додавання чисел з рухомою крапкою (комою)
+// Додаючи нецілі числа, в JavaScript і в інших мовах програмування є особливість. Якщо коротко, то 0.1 + 0.2 не дорівнює 0.3, результат додавання буде більший, ніж 0.3. Це тому що машина рахує у двійковій системі.
+
+// Число 0.1 у двійковій системі числення - це нескінченний дріб, оскільки у двійковій системі одиниця не ділиться на десять. Двійкове значення нескінченних дробів зберігається тільки до певного знаку, тому виникає неточність. При додаванні 0.1 і 0.2, додаються дві неточності, виходить незначна, але все-таки помилка в обчисленнях.
+
+// console.log(0.1 + 0.2 === 0.3); // false
+// console.log(0.1 + 0.2); // 0.30000000000000004
+
+// Звичайно, це не значить, що точні обчислення для таких чисел неможливі. Існує декілька методів вирішення цієї проблеми.
+
+// Можна зробити їх цілими, помноживши на N, додати, а потім результат поділити також на N.
+
+// console.log(0.17 + 0.24); // 0.41000000000000003
+// console.log((0.17 * 100 + 0.24 * 100) / 100); // 0.41
+
+// Ще один спосіб - додати, а результат скоротити до певного знаку після коми за допомогою методу toFixed().
+
+// console.log(0.17 + 0.24); // 0.41000000000000003
+// console.log((0.17 + 0.24).toFixed(2)); // 0.41
+
+// ---------------------------------------------------------------//
+
+// *** Клас Math
+// Один із вбудованих класів, який надає набір методів для роботи з числами. Знання всіх методів напам'ять не вимагається, тільки деяких, найбільш корисних.
+
+// // Math.floor(num) - повертає найменше ціле число,
+// // менше, або яке дорівнює зазначеному числу
+// console.log(Math.floor(1.7)); // 1
+
+// // Math.ceil(num) - повертає найбільше ціле число,
+// // більше, або яке дорівнює зазначеному числу.
+// console.log(Math.ceil(1.2)); // 2
+
+// // Math.round(num) - повертає значення числа,
+// // округленого до найближчого цілого
+// console.log(Math.round(1.2)); // 1
+// console.log(Math.round(1.5)); // 2
+
+// // Math.max(num1, num2, ...) - повертає найбільше ціле число з набору
+// console.log(Math.max(20, 10, 50, 40)); // 50
+
+// // Math.min(num1, num2, ...) - повертає найменше ціле число з набору
+// console.log(Math.min(20, 10, 50, 40)); // 10
+
+// // Math.pow(base, exponent) - піднесення до степеня
+// console.log(Math.pow(2, 4)); // 16
+
+// // Math.random() - повертає псевдовипадкове число в діапазоні [0, 1)
+// console.log(Math.random()); // випадкове число між 0 і 1
+// console.log(Math.random() * (10 - 1) + 1); // псевдовипадкове число від 1 до 10
+
+// ----- Шаблонні рядки
+// Шаблонні рядки - це альтернатива конкатенації зі зручнішим синтаксисом. Шаблонний рядок береться у зворотні (косі) лапки, замість подвійних або одинарних, і може містити заповнювачі місця, які позначаються знаком долара і фігурними дужками - ${вираз}.
+
+// // Використовуючи змінні, необхідно скласти рядок з підставленими значеннями
+// const guestName = "Манго";
+// const roomNumber = 207;
+// const greeting =
+//   "Welcome " + guestName + ", your room number is " + roomNumber + "!";
+// console.log(greeting); // "Welcome Mango, your room number is 207!"
+
+// Складати рядки з підставленими значеннями, використовуючи конкатенацію, - дуже незручно. На допомогу приходять шаблонні рядки та інтерполяція.
+
+// const guestName = "Манго";
+// const roomNumber = 207;
+// const greeting = `Welcome ${guestName}, your room number is ${roomNumber}!`;
+// console.log(greeting); // "Welcome Mango, your room number is 207!"
+
+//-------------------------------------------------------------------------------//
+
+// ** Властивості і методи рядків
+// У кожного рядка є вбудовані властивості і методи, розглянемо деякі з них.
+
+// Властивість length
+// Для того, щоб дізнатися довжину рядка, тобто кількість його символів, у всіх рядків є вбудована властивість length, значення якої можна отримати, звернувшись до нього через крапку після імені змінної або рядкового літерала.
+
+// const message = "Welcome to Bahamas!";
+// console.log(message.length); // 19
+// console.log("There is nothing impossible to him who will try".length); // 47
+
+// ----- Методи toLowerCase() і toUpperCase()
+// Повертають новий рядок у відповідному регістрі, не змінюючи оригінальний рядок.
+
+// const message = "Welcome to Bahamas!";
+// console.log(message.toLowerCase()); // "welcome to bahamas!"
+// console.log(message.toUpperCase()); // "WELCOME TO BAHAMAS!"
+// console.log(message); // "Welcome to Bahamas!"
+
+// Бувають ситуації, коли всі символи в рядку необхідно перетворити в один регістр, верхній або нижній. Наприклад, для пошуку за ключовим словом, коли користувач вводить рядок 'saMsUng', а порівняти його потрібно з рядком 'samsung' або 'SAMSUNG'.
+
+// console.log("saMsUng" === "samsung"); // false
+// console.log("saMsUng" === "SAMSUNG"); // false
+
+// Щоб не вимагати абсолютно точне введення, можна зробити «нормалізацію» введеного користувачем рядка, тобто перетворити всі його символи у верхній або нижній регістр. Методи рядка toLowerCase() і toUpperCase() повернуть новий рядок у відповідному регістрі, не змінюючи оригінальний.
+
+// const BRAND_NAME = "SAMSUNG";
+// const userInput = "saMsUng";
+// const normalizedToUpperCaseInput = userInput.toUpperCase();
+
+// console.log(userInput); // 'saMsUng'
+// console.log(userInput === BRAND_NAME); // false
+// console.log(normalizedToUpperCaseInput); // 'SAMSUNG'
+// console.log(normalizedToUpperCaseInput === BRAND_NAME); // true
+
+//------------------------------------------------------------------------------//
+
+// ---- Метод indexOf()
+// Повертає позицію (індекс), на якій знаходиться перший збіг підрядка або -1, якщо нічого не знайдено.
+
+// const message = "Welcome to Bahamas!";
+// console.log(message.indexOf("to")); // 8
+// console.log(message.indexOf("hello")); // -1
+
+// ----  Метод includes()
+// Перевіряє, чи міститься підрядок в рядку, повертає буль - true, якщо міститься, і false - в іншому випадку. Регістр символів в рядку і підрядку має значення, оскільки, наприклад, літера "a" не дорівнює літері "А".
+
+// const productName = "Ремонтний дроїд";
+
+// console.log(productName.includes("н")); // true
+// console.log(productName.includes("Н")); // false
+// console.log(productName.includes("дроїд")); // true
+// console.log(productName.includes("Дроїд")); // false
+// console.log(productName.includes("Ремонтний")); // true
+// console.log(productName.includes("ремонтний")); // false
+
+//-----------------------------------------------------------//
+
+// ---- Метод endsWith()
+// Дозволяє визначити, чи завершується рядок символами (підрядком), зазначеними в дужках, повертаючи true або false.
+
+// const jsFileName = "script.js";
+// console.log(jsFileName.endsWith(".js")); // true
+
+// const cssFileName = "styles.css";
+// console.log(cssFileName.endsWith(".js")); // false
+
+// ---- Методи replace() і replaceAll()
+// Повертає новий рядок, в якому перше (replace) або усі збіги (replaceAll) підрядка замінені на вказане значення.
+
+// const jsFileName = "script.js";
+// const minifiedJsFileName = jsFileName.replace(".js", ".min.js");
+// console.log(minifiedJsFileName); // "script.min.js"
+
+// const cssFileNames = "styles.css, about.css, portfolio.css";
+// const minifiedCssFileNames = cssFileNames.replaceAll(".css", ".min.css");
+// console.log(minifiedCssFileNames); // "styles.min.css, about.min.css, portfolio.min.css"
+
+//  ---- Метод slice()
+// Метод рядків slice (startIndex, endIndex) використовується для створення копії частини або всього рядка. Він робить копію елементів рядка від startIndex і до, але не включно endIndex і повертає новий рядок, не змінюючи оригінал.
+
+// const productName = "Repair droid";
+// console.log(productName.slice(0, 4)); // "Repa"
+// console.log(productName.slice(3, 9)); // "air dr"
+// console.log(productName.slice(0, productName.length)); // "Repair droid"
+// console.log(productName.slice(6, productName.length)); // "droid"
+
+//** --------------------------------------------------------------------- **/
+
+// ** Логічні оператори!
+// Логічні оператори використовуються для перевірки умов з багатьма виразами, наприклад в операціях порівняння.
+// Запам'ятайте 6 хибних (falsy) значень, що приводяться до false у логічному перетворенні: 0, NaN, null, undefined,
+// порожній рядок і false.Абсолютно все інше приводиться до true.
+// ** Логічні оператори!
+// Існує три логічні оператори: (&& (і)), (||)або), (!)ні) які використовуються для перевірки виконання множинних виразів.
+
+// ---- Логічне «І»
+// Оператор && приводить всі операнди до буля і повертає значення одного з них.
+// Лівий операнд - якщо його можна привести до false, і правий - в інших випадках.
+
+// вираз && вираз
+
+// У наступному прикладі обидві умови повернуть true, тому результатом всього виразу буде true - повернеться значення правого операнда
+// const age = 20;
+// console.log(age > 10 && age < 30); // true && true -> true
+
+// Якщо хоча б один із операндів буде приведений до false, результатом виразу буде його значення.
+
+// const age = 50;
+// console.log(age > 10 && age < 30); // true && false -> false
+// console.log(age > 80 && age < 120); // false && true -> false
+
+// Тобто, логічне «І» зупиняється на хибному і повертає те, на чому зупинилось, або останній операнд.
+
+// console.log(1 && 5); // true && true -> 5
+// console.log(5 && 1); // true && true -> 1
+// console.log(0 && 2); // false && true -> 0
+// console.log(2 && 0); // true && false -> 0
+// console.log("" && "Mango"); // false && true -> ""
+// console.log("Mango" && ""); // true && false -> ""
+// console.log("Mango" && "Poly"); // true && true -> "Poly"
+// console.log("Poly" && "Mango"); // true && true -> "Mango"
+
+// Тобто, логічне «І» зупиняється на хибному і повертає те, на чому зупинилось, або останній операнд.
+// console.log(1 && 5); // true && true -> 5
+// console.log(5 && 1); // true && true -> 1
+// console.log(0 && 2); // false && true -> 0
+// console.log(2 && 0); // true && false -> 0
+// console.log("" && "Mango"); // false && true -> ""
+// console.log("Mango" && ""); // true && false -> ""
+// console.log("Mango" && "Poly"); // true && true -> "Poly"
+// console.log("Poly" && "Mango"); // true && true -> "Mango"
+
+// ** ЦІКАВО **
+// Виконуючи логічне «І», правий операнд може не обчислюватися у випадку, якщо лівий був приведений до false.
+
+// ---- Логічне (||) «АБО»
+// Оператор || приводить всі операнди до буля і повертає значення одного з них. Лівий операнд - якщо його можна привести до true, і правий - в інших випадках.
+
+// вираз || вираз
+
+// У наступному прикладі умова зліва поверне true, тому результатом всього виразу буде true - повернеться значення першого операнда, яке було приведене до true.
+
+// const age = 5;
+// console.log(age < 10 || age > 30); // true || false -> true
+
+// В цьому випадку результатом теж буде true, оскільки хоча б один із операндів, в цьому випадку правий, був приведений до true.
+
+// const age = 40;
+// console.log(age < 10 || age > 30); // false || true -> true
+
+// А тут жодна з умов не виконується, тому отримуємо false - значення останнього операнда.
+
+// const age = 20;
+// console.log(age < 10 || age > 30); // false || false -> false
+
+// Тобто, логічне «АБО» зупиняється на правді і повертає те, на чому зупинилося або останній операнд.
+
+// console.log(true || false); // true
+// console.log(false || true); // true
+// console.log(true || true); // true
+
+// console.log(3 || false); // 3
+// console.log(false || 3); // 3
+// console.log(3 || true); // 3
+// console.log(true || 3); // true
+
+// ЦІКАВО
+// Виконуючи логічне «АБО», правий операнд може не обчислюватися у випадку, якщо лівий був приведений до true.
+
+// ---- Логічне «НЕ»
+// Всі оператори, які ми розглядали до цього, були бінарними - містять два операнди: лівий і правий. Логічне «НЕ» - це унарний оператор, який виконує операцію над одним операндом з правої сторони.
+
+// !вираз
+
+// Оператор ! приводить операнд до буля, якщо необхідно, а потім робить інверсію - змінює його на протилежний true -> false або false -> true.
+
+// console.log(!true); // false
+// console.log(!false); // true
+// console.log(!3); // !3 -> !true -> false
+// console.log(!"Mango"); // !"Mango" -> !true -> false
+// console.log(!0); // !0 -> !false -> true
+// console.log(!""); // !"" -> !false -> true
+
+// const isOnline = true;
+// const isNotOnline = !isOnline; // !isOnline -> !true -> fals
+
+
+
 
