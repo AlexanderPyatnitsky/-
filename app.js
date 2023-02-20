@@ -817,9 +817,9 @@
 */
 
 // 1) Переменные.
-const min = 0;
-const max = 5;
-let total = 0;
+// const min = 0;
+// const max = 5;
+// let total = 0;
 
 // 1-е решение (не очень....)
 // // 2) Фор от мин. до макс с шагом в 1.
@@ -884,7 +884,7 @@ let total = 0;
 // }
 // console.log("Операция завершина!");
 
-// ========= Задачка №3 ========= //
+// ========= Задачка №4 ========= //
 /*
 * Напиши скрипт подсчёта суммы покупки со скидкой 
 * в зависимости от потраченной суммы за всё время (партнёрская программа).
@@ -905,7 +905,7 @@ let total = 0;
 // let discount = 0;
 
 // if (totalSpent >= 100 && totalSpent < 1000) {
-//     discount = 0.02; 
+//     discount = 0.02;
 //     console.log("скидка 2%");
 // } else if (totalSpent >= 1000 && totalSpent < 5000) {
 //     discount = 0.05;
@@ -922,6 +922,84 @@ let total = 0;
 // totalSpent += payment;
 
 // console.log(`Общая сумма ${totalSpent} потраченного в магазине`);
+
+// ========= Задачка №5 ========= //
+/*
+* Використовуючи  конструкйію if...else та prompt, сворюємо код, який питатиме:
+*  - Яка офіційна назва Jawa Script?... Якщо користувач вводить "ECMAScript" то показує alert з 
+*    рядком - "Правильно пане!" 
+*    В іншому випадку - Не знаєте?.., "ECMAScript".
+*/
+
+// const input = prompt("Яка офіційна назва Jawa Script?...");
+// const lowerCaseInput = input.toLowerCase();
+// console.log(input.toLowerCase());
+// if (lowerCaseInput === "ecmascript") {
+//     alert("Правильно пане!");
+
+// } else {
+//     alert("Не знаєте?.., ECMAScript");
+// }
+
+// ========= Задачка №6 ========= //
+/*
+*  Напишіть скропт для відображення годин та хвилин у консолі браузера у вигляді рядка у 
+*   вигляді: "14 г. 26 хв." Якщо значення minutes дорівнює "0", то виводимо рядок: "14 г." без хвилин.
+*/
+// const hours = 14;
+// const minutes = 26;
+// let timeString;
+
+// if (minutes !== 0) {
+//     timeString = `${14} г. ${26} хв.`;
+
+// } else {
+//     timeString = `${14} г.`;
+// }
+// console.log(timeString);
+
+// ========= Задачка №7 ========= //
+/*
+*  Напишіть скропт який виводить у консоль рядок "Це позитивне число.", якщо 
+*   у prompt користувач ввів більше нуля. Якщо було введено нуль, будемо виводите в консоль рядок "Це нуль".
+*   Якщо передали відємне число, у консолі повин буди рядок "Це негативне чісло".
+*/
+// const userInput = prompt('Введіть число.');
+// const userInputNumber = Number(userInput);
+
+
+// if (userInputNumber > 0) {
+//   console.log("Більше нуля!");
+// } else if (userInputNumber === 0) {
+//   console.log("Нуль!");
+// } else if (userInputNumber < 0) {
+//   console.log("Меньше нуля!");
+// } else {
+//     console.log("Це не чісло!");
+// }
+
+// ========= Задачка №8 ========= //
+/*
+*  Напишіть скропт який порівнює числа в змінних 'a' та 'b'. Якщо обидва числа більше "100". то будемо 
+*  виводити в консоль максимальне з них. В протилежному випадку повинна бути сумма значення 'b'  та чісла "512".
+*/
+// const a = 80;
+// const b = 180;
+// const isBothVariablesAreGreaterThan100 = a > 100 && b > 100;
+// const isAMoreB = a > b;
+
+// if (isBothVariablesAreGreaterThan100 && isAMoreB) {
+//     console.log(a);
+// } else if (isBothVariablesAreGreaterThan100 && !isAMoreB) {
+//     console.log(b);
+// } else {
+//     console.log(b + 512);
+// }
+
+// ========= Задачка №9 ========= //
+
+
+
 
 
 
