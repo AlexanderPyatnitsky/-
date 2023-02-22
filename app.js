@@ -998,14 +998,47 @@
 
 // ========= Задачка №9 ========= //
 
+/*
+* інструкція ---- endsWidth. Напишіть скропт який перевіряє чи закіннчується значенням змінної "link", символом "/". Якщо ні
+*  будемо додавати до кінця значення "link" цей символ.
+*  Використовуваем конструкцію if...else.
+*/
+// let link = 'https://somesite.com/abaut';
+// const isLinkEndsWidthSlash = link.endsWith('/');
+// //
+// // ---- (1 вар - не дуже!)
+// if (isLinkEndsWidthSlash) {
+// console.log(link);
+// } else {
+//     link += '/';
+// }
+// console.log(link);
 
+// ---- (2 вар - отлично!)
+// if (!isLinkEndsWidthSlash) {
+// link += "/";
+// }
+// console.log(link);
 
+// ========= Задачка №10 ========= //
+/*
+*  інструкція ---- includes та логіне "I"
+*  Напишіть скропт який перевіряє чи закіннчується значенням змінної "link", символом "/". Якщо ні
+*  будемо додавати до кінця значення "link" цей символ, але тільки в тому випадку, якщо в "link"
+*  є підрядок "my-site", використовуємо конструкцію if...else.
+*/
+// let link = "https://my-site.com/abaut";
+// const isLinkEndsWidthSlash = link.endsWith("/");
+// const hasMaySiteText = link.includes("my-site");
 
+// if (!isLinkEndsWidthSlash && hasMaySiteText) {
+// link += "/";
+// }
+// console.log(link);
 
-
-
-
-
-
-
-
+// ========= Задачка №11 ========= //
+/*
+* Використовуємо тернарний оператор, коллеги! 
+*
+*/
+let link = "https://somesite.com/abaut";
