@@ -1036,9 +1036,94 @@
 // }
 // console.log(link);
 
-// ========= Задачка №11 ========= //
+// =====
 /*
-* Використовуємо тернарний оператор, коллеги! 
+* Теж саме, але використовуємо тернарний оператор, коллеги! 
 *
 */
-let link = "https://somesite.com/abaut";
+// link = !isLinkEndsWidthSlash && hasMaySiteText ? link += "/" : link;
+// console.log(link);
+
+// ========= Задачка №11 ========= //
+/*
+*  Писатимемо скрипт, який виводитиме в консоль браузере рядок залежно від значення змінної "Hours".
+*  Якщо значення змінної 'hours': 
+*  - меньше 17 виводить рядок 'Pending';
+*  - більше або дорівнює '17' і меньше або дорівнює 24 виводить рядок 'Exspires';
+*  - більше '24' 'Overdue'.
+*/
+// const hours = 30;
+// const isHoursLessThan17 = hours < 17;
+// const isHoursBeweenThan17And24 = hours >= 17 && hours <= 24;
+// const isHoursMoreThen24 = hours > 24;
+
+// if (isHoursLessThan17) {
+//     console.log("Pending");
+// } else if (isHoursBeweenThan17And24) {
+//     console.log("Exspires");
+// } else {
+//     console.log("Overdue");
+// }
+
+// ---- тернарний оператор! як приклад але не дуже!!!
+// const isHoursAreValid = isHoursLessThan17 ? "Pending" : isHoursBeweenThan17And24 ? "Exspires" : "Overdue"
+// console.log(isHoursAreValid);
+
+// --- const userName = 'Aleksandr';
+// let age = userName === "Aleksandr" ? 44 : 10;
+// console.log(age);
+
+// ========= Задачка №12 ========= //
+/*
+* Напиши скрипт для відображення часу дедлайну сдачі проект. Використовуючи if...else:
+*  - якщо до дедлайну 0 днів, виводим строку "Сьогодні!";
+*  - якщо до дедлайну 1 день, виводим строку "Завтра!";
+*  - якщо до дедлайну 2 дні, виводим строку "Післязавтра!"
+*  - якщо до дедлайну 3+ днів, виводим строку "Дата у майбутньому!"
+*/
+
+// const dataUntilDeadLine = 0;
+// ---- ІФ
+// if (dataUntilDeadLine === 0) {
+//   console.log("Сьогодні!");
+// } else if (dataUntilDeadLine === 1) {
+//   console.log("Завтра!");
+// } else if (dataUntilDeadLine === 2) {
+//   console.log("Післязавтра!");
+// } else {
+//   console.log("Дата у майбутньому!");
+// }
+
+// --- Світч
+//     switch (dataUntilDeadLine) {
+//     case 0: {
+//         console.log("Сьогодні!")
+//         break;
+//     }
+//     case 1: {
+//         console.log("Завтра!");
+//         break;
+//     }
+//     case 2: {
+//         console.log("Післязавтра!");
+//         break;
+//     }
+//         default: {
+//         console.log("Дата у майбутньому!");
+//     }
+// }
+
+// ========= Задачка №13 ========= //
+/*
+*  Будемо писати цикл for який, виводить у консоль браузера числа за зрочтанням від min до max,  
+*  але якщо число кратне "5".
+*/
+// const max = 98;
+// const min = 19;
+// for (let i = min; i <= max; i+=1) {
+//     if (i % 5 === 0) {
+//         console.log(i);
+//     }
+    
+// }
+
