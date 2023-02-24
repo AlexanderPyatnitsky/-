@@ -1127,3 +1127,56 @@
     
 // }
 
+// ========= Задачка №14 ========= //
+/*
+* Напиши скрипт який пататиме - Логін за допомогою "prompt" та логувати результат у консоль.
+*  - якщо відвідувач вводить "Адмін", то "prompt" запитує пароль.
+*  - якщо нічого не введено, або натиснута клавиша "Esc" - вивести рядок "Скасовано".
+*  - в іншому випадку вивести рядок - "Хто ви, я вас не знаю. Допобачення".
+* Пароль перевіряти так: 
+* - якщо парольвведено "Я адмін", то вивести рядок - "Я вас вітаю, пане!"
+* - інакше виводити рядок - "Не вірний пароль, або логін!"
+*/
+// const userName = prompt("Enter your name");
+// const isAdminUser = userName === "Admin";
+// --- 1-й ок!//
+
+// if (!isAdminUser) {
+//     alert("Не вірний пароль, або логін!");
+// } else {
+//   const password = prompt("Enter your password");
+//     const isValidAdminPassword = password === "I am admin";
+//     const autput = isValidAdminPassword ? "Я вас вітаю, пане" : "Скасовано";
+//     alert(autput);
+// }
+
+// ---- 2-й норм!//
+
+// if (isAdminUser) {
+//   const password = prompt("Enter your password");
+//   const isValidAdminPassword = password === "I am admin";
+//   const autput = isValidAdminPassword ? "Я вас вітаю, пане" : "Скасовано";
+//   alert(autput);
+// } else {
+//   alert(
+//     "Не вірний пароль, або логін!"
+//   );
+// }
+
+// ---- 3-й не ок!//
+// if (userName === "Admin") {
+//   const password = prompt("Enter your password");
+//     if (password === "I admin") {
+//       alert("Wellcome!");
+//     } else {
+//       alert("Not wellcome!");
+//     }
+        
+// } else {
+//   alert("Who are you, I don't know you. I'm sorry!");
+// }
+
+// ----- Ок!
+
+
+
