@@ -351,8 +351,8 @@
 // ==================== Задача №3 ==================== //
 
 // Напиши скрипт который подсчитывает сумму всех чётных чисел в масиве.
-// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 38, 18, 11, 14];
-// let totalNumbers = 0;
+const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 38, 18, 11, 14];
+let totalNumbers = 0;
 
 // for (let i = 0; i < numbers.length; i += 1) {
 // const number = numbers[i];
@@ -371,5 +371,45 @@
 // }
 // console.log(`Total:`, totalNumbers);
 
+// ---- ok ----
+// for (const number of numbers) {
+//   // console.log(number);
+//   if (number % 2 === 0) {
+//     console.log(`${number} - Чётное`);
+//     totalNumbers += number;
+//   }
+// }
+// console.log('Total:', totalNumbers);
 
+// ==================== Задача №4 ==================== //
+/*
+*  Напиши скрипт поиска "Логина".
+*  - если логина нет выведи сообщение: "Пользователь (Login) не найден!"
+*  - если логина найден выведи сообщение: "Пользователь (Login) найден!"
+*  сначала через for;
+*  потом через for ... of;
+*  логика break;
+*  метод includes() с тернарнім оператором.
+*/
+// const logins = ["eccosoft", "moby", "doggycoin", "findcoin", "rangestar"];
+// const loginToFind = "doggycoin";
+// let message = `Пользователь ${loginToFind} не найден!`;
+// for (let i = 0; i < logins.length; i += 1) {
+//   const login = logins[i];
+//   // console.log(logins[i]);
+//   if (login === loginToFind) {
+//     message = `Пользователь ${loginToFind} найден!`;
+//     break;
+//   }
+// }
+// console.log(message);
 
+// ---- ok ----
+// for (const login of logins) {
+//   if (login === loginToFind) {
+//     message = `Пользователь ${loginToFind} найден!`;
+//     break;
+//   }
+  
+// }
+// console.log(message);
