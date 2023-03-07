@@ -442,4 +442,89 @@
 * сначала через for; 
 * затем через join().
 */
-const frends = ['join', 'kiwi', 'bobi', 'polo', 'mango'];
+// const frends = ['join', 'kiwi', 'bobi', 'polo', 'mango'];
+// let string = frends.join(', ');
+// console.log(string);
+
+// =============== Задача №7 ================ //
+/*
+* Напиши скрипт, который заменит регистер каждого символа в строке на противоположный.
+* - например: если строка "JawaScript" то на выходе дожно быть так "jAWAsCRIPT"!
+*/
+// ---- олдскул ----
+
+// const string = "Пятницкий Александр";
+// const letters = string.split('');
+// console.log(letters);
+// let inverterString = '';
+// for (const letter of letters) {
+//     console.log(letter);
+//     if (letter === letter.toLowerCase()) {
+//         console.log(`Эта буква в нижнем регистре.`, letter);
+//         isEcual;
+//     } else {
+//         console.log(`Эта буква в верхнем регистре.`, letter);
+//         inverterString += letter.toLowerCase();
+
+//     }
+// }
+// console.log(`Результат:` ,inverterString);
+
+// ---- Фича ----
+// for (const letter of letters) {
+//     console.log(letter);
+//     const isEcual = letter === letter.toLocaleLowerCase();
+//     inverterString += isEcual
+//       ? letter.toUpperCase()
+//       : letter.toLocaleLowerCase();
+// }
+// console.log(`Результат:`, inverterString);
+
+// =============== Задача №8 ================ //
+/*
+* Делаем slug в URL из названия статьи, например на (dev.to).split
+* заголовок статьи состоит из букв и пробелов.
+* - ногмализуем строку.
+* - разбиваем по словам.
+* - сшиваем строку с разделителями.
+*
+* Должно получиться: top-10-benefits-of-react-framework
+*/
+// ---- oldscull ----
+// const title = "Top 10 benefits of React framework";
+// const normalizeTitle = title.toLowerCase();
+// console.log(normalizeTitle);
+// const parseString = normalizeTitle.split(" ");
+// console.log(parseString);
+// const isEcualtitle = parseString.join('-');
+// console.log(isEcualtitle);
+
+// ---- Ficha ----
+// const slug1 = title.toLowerCase().split(" ").join("-");
+// console.log(slug1);
+
+// =============== Задача №9 ================ //
+/*
+* Напиши скрипт, который считает общую сумму элементов двух масивов.
+*/
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
+
+// ---- oldscull ----
+// for (let i = 0; i < array1.length; i += 1) {
+//     total += array1[i];
+// }
+
+// for (let i = 0; i < array2.length; i += 1) {
+//     total += array2[i];
+// }
+
+// console.log(total);
+
+// ---- Ficha ----
+// const numbers = array1.concat(array2);
+// for (const number of numbers ) {
+//     total += number;
+// }
+// console.log(total);
