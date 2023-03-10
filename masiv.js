@@ -544,14 +544,25 @@
 //   "Карточка-4",
 //   "Карточка-5",
 // ];
-
+// console.table(cards);
 // // удаление по (индексу), метод indexOf
 // const cardToRemove = "Карточка-3";
+// const index = cards.indexOf(cardToRemove);
+// cards.splice(index, 1);
+// console.table(cards);
+
 
 // // добавление по (индексу)
 // const cardToInsert = "Карточка-6";
-// const index = 3;
+// const index = cards.indexOf(cardToInsert);
+// console.log(index);
+// cards.splice(5, 0, "Карточка-6");
+// console.table(cards);
+
+
 
 // // обновление по (индексу) 
 // const cardToUpdate = "Карточка-4";
-
+// const index = cards.indexOf(cardToUpdate);
+// cards.splice(index, 1, "Обновлённая карточка-4");
+// console.table(cards);
