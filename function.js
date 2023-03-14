@@ -30,3 +30,27 @@
 // console.log(`Общая сумма покупок: ${ result1 }`);
 // console.log(`Общая сумма покупок: ${ result2 }`);
 // console.log(`Общая сумма покупок: ${ result3 }`);
+
+// ========== Задача №2 =========== //
+/*
+* Напиши функцию findLogin (allLogins, login) для поиска логина.
+* - если логин есть вывести сообщение: Пользователь [Login] найден.
+* - если логин не найден вывести сообщение: Пользователь [Login] не найден.
+*/
+// const logins = ['m4ngoDoge', 'kiwidab3st', 'poly1scute', 'aj4xth3m4n'];
+
+// const findLogin = function (allLogins, loginToFind) {
+//     for (const logins of allLogins) {
+//         if (logins === loginToFind) {
+//         return `Пользователь ${loginToFind} найден.`;
+//         }
+        
+//     }
+//     return `Пользователь ${loginToFind} не найден.`;
+// };
+
+// console.log(findLogin(logins, "avokod3r"));
+// console.log(findLogin(logins, "kiwidab3st"));
+// console.log(findLogin(logins, "jam4l"));
+// console.log(findLogin(logins, "aj4xth3m4n"));
+
