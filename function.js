@@ -54,3 +54,67 @@
 // console.log(findLogin(logins, "jam4l"));
 // console.log(findLogin(logins, "aj4xth3m4n"));
 
+// ---- вар. №2 ---- //
+// const logins = ['m4ngoDoge', 'kiwidab3st', 'poly1scute', 'aj4xth3m4n'];
+// const findLogin = function (allLogins, loginToFind) {
+// const message = logins.includes(loginToFind)
+//     ? `Пользователь ${loginToFind} найден.`
+//     : `Пользователь ${loginToFind} не найден.`;
+    
+//     return message;
+// };
+// console.log(findLogin(logins, "avokod3r"));
+// console.log(findLogin(logins, "kiwidab3st"));
+// console.log(findLogin(logins, "jam4l"));
+// console.log(findLogin(logins, "aj4xth3m4n"));
+
+// ---- вар. №3 ---- //
+// const logins = ['m4ngoDoge', 'kiwidab3st', 'poly1scute', 'aj4xth3m4n'];
+// const findLogin = function (allLogins, loginToFind) {
+// return logins.includes(loginToFind)
+//     ? `Пользователь ${loginToFind} найден.`
+//     : `Пользователь ${loginToFind} не найден.`;
+// };
+// console.log(findLogin(logins, "avokod3r"));
+// console.log(findLogin(logins, "kiwidab3st"));
+// console.log(findLogin(logins, "jam4l"));
+// console.log(findLogin(logins, "aj4xth3m4n"));
+
+// ========== Задача №3 =========== //
+/*
+* Напиши функцию findSmallesNumber(numbers) для поиска самого малого числа в масиве, 
+* приусловии что числа уникальные (не повторяются).
+*/
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallesNumber = numbers[0];
+// for (const number of numbers) {
+//     if (number < smallesNumber) {
+//         smallesNumber = number;
+//     }
+// }
+
+// console.log(`Самое маленькое число: `, smallesNumber);
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let smallesNumber = numbers[0];
+// for (const number of numbers) {
+//   if (number < smallesNumber) {
+//     smallesNumber = number;
+//   }
+// }
+
+// ---- вар 2 ----
+// const findSmallesNumber = function (numbers) {
+//     let smallesNumber = numbers[0];
+//     for (const number of numbers) {
+//         if (number < smallesNumber) {
+//             smallesNumber = number;
+//         }
+//     }
+
+//     return smallesNumber;
+// }
+
+// console.log(findSmallesNumber([3, 8, 12, -2, 15]));
+// console.log(findSmallesNumber([100, 54, 8, 12, 47]));
+// console.log(findSmallesNumber([7, 21, 84, 15, 4]));
